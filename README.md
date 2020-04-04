@@ -30,4 +30,4 @@ git
     $ go run cmd/web/*
     ```
 
-2. Browse to `http://localhost:3000/`
+2. Browse to `http://localhost:4000/`
