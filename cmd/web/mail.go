@@ -55,7 +55,7 @@ func mail(address string) {
 	// API 연동
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", "https://api.smartable.ai/coronavirus/news/US", nil)
-	req.Header.Set("Subscription-Key", "731335f75df5479ebc467601772365f0")
+	req.Header.Set("Subscription-Key", "API KEY") // PUT YOUR API KEY HERE
 	res, _ := client.Do(req)
 
 	responseData, responseError := ioutil.ReadAll(res.Body)
@@ -84,7 +84,7 @@ func mail(address string) {
 	// 메일서버 로그인 정보 설정
 	auth := smtp.PlainAuth("", "your gmail user id", "your gmail user password", "smtp.gmail.com")
 
-	from := "legitcode267@gmail.com"
+	from := "your gmail id"
 	to := []string{address} // 복수 수신자 가능
 
 	// 메시지 작성
